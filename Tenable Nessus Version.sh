@@ -10,3 +10,4 @@ else
  NessusAgentVersion="$(/Library/NessusAgent/run/sbin/nessuscli -v | awk 'NR==1{print $3 " " $4 " " $5}')"
  echo "<result>$NessusAgentVersion</result>"
 fi
+#fortesting
