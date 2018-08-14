@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+osascript -e 'tell app "System Events" to display alert "GSA-IT-Google Chrome needs to quit now to install updates. Click OK to continue"'
+#
+osascript -e 'quit app "/Applications/Google Chrome.app"'
+#
+exit 0
