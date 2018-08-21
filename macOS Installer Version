@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Checks the build version of the macOS installer
+
+# Created by AVB 08212018
+
+# macOS Installer Version="CFBundleShortVersionString"
+
+macos_installer_Version="/Applications/Install macOS High Sierra.app"
+
+if [ -e "$macos_installer_Version" ]; then 
+     result=$(defaults read "${macos_installer_Version}/Contents/version.plist" CFBundleShortVersionString)
+else
+     result="Not Installed"
+fi
+
+echo "<result>$result</result>"
