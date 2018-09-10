@@ -6,7 +6,7 @@
 
 #bddy=/usr/libexec/PlistBuddy
 #
-user=$( ls -l /dev/console | awk '{print $3}' )
+user=`who|grep console|sed -n 1p|awk '{print $1}'`
 #
 sudo -u $user /Applications/VMware\ Horizon\ Client.app/Contents/Library/InitUsbServices.tool &>/dev/null
 #
