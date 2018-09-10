@@ -2,9 +2,10 @@
 
 # VMWare Horizon Configuration
 
-# AVB
+# AVB 09102018
 
-#bddy=/usr/libexec/PlistBuddy
+LOGPATH='/private/var/log'
+LOGFILE=$LOGPATH/GSAlog$(date +%m.%d.%Y.%H:%M).log
 #
 user=`who|grep console|sed -n 1p|awk '{print $1}'`
 #
@@ -16,4 +17,5 @@ sudo -u $user defaults write /Users/$user/Library/Preferences/com.vmware.horizon
 #
 sudo -u $user defaults write /Users/$user/Library/Preferences/com.vmware.horizon trustedServers -array -string https://horizon.gsa.gov:443/broker/xml
 #
-echo $(date) "VMWare Horizon configuration has completed." >> /var/log/GSAlog
+echo $(date) "VMWare Horizon configuration has completed." >> $LOGFILE
+exit 0
