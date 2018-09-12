@@ -10,7 +10,7 @@
 bddy=/usr/libexec/PlistBuddy
 tgt=/Applications/Snagit\ 2018.app/Contents/Info.plist
 ##############################################
-if [ -e $tgt ]; then
+if [[ -e $tgt ]]; then
 instld=`$bddy -c "print CFBundleShortVersionString" "$tgt"`
 echo "<result>$instld</result>"
 else
