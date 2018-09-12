@@ -7,12 +7,9 @@
 #
 if [ -d /Applications/Snagit.app ]; then
 #
-killall SnagitAppleScriptExecutor &>/dev/null
-sleep 1
+pkill Snagit &>/dev/null
+sleep 2
 killall Snagit &>/dev/null
-sleep 1
-killall SnagitHelper &>/dev/null
-#
 sleep 10
 #
 rm -rf /Applications/Snagit.app &>/dev/null
