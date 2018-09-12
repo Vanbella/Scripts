@@ -7,14 +7,17 @@
 #
 if [ -d /Applications/Snagit.app ]; then
 #
-osascript -e 'quit app "/Applications/Snagit.app"' &> /dev/null
+killall Snagit &>/dev/null
+sleep 1
+killall 
 #
-sleep 15
+sleep 5
 #
-rm -rf /Applications/Snagit.app &> /dev/null
-rm -rf /Users/Shared/TechSmith/Snagit &> /dev/null
+rm -rf /Applications/Snagit.app &>/dev/null
+rm -rf /Users/Shared/TechSmith/Snagit &>/dev/null
 #
-else
 echo "Snagit 4.1.8 uninstalled" >> /var/log/GSAlog
+else
+echo "Snagit 4.1.8 not found" >> /var/log/GSAlog
 fi
 exit 0
