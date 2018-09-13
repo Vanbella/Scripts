@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#  gov.gsa.snagit_2018.uninstall.sh
+#  govgsagit
+#
+#  Created by AVB on 9/12/18.
+#
+if [ -d /Applications/Snagit\ 2018.app ]; then
+#
+pkill Snagit 2018 &>/dev/null
+sleep 2
+pkill Snagit 2018 &>/dev/null
+sleep 5
+#
+rm -rf /Applications/Snagit 2018.app &>/dev/null
+rm -rf /Users/Shared/TechSmith/Snagit &>/dev/null
+#
+echo "Snagit 2018 uninstalled" >> /var/log/GSAlog
+else
+echo "Snagit 2018 not found" >> /var/log/GSAlog
+fi
+exit 0
