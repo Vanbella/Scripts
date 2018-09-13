@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#  gov.gsa.citrix_receiver.uninstall.sh
+#  govgsagit
+#
+#  Created by AVB on 9/13/18.
+#  
+##############################################
+user=`who|grep console|sed -n 1p|awk '{print $1}'`
+##############################################
+#
+sudo -u $user launchctl unload /Library/LaunchAgents/com.citrix.ctxusbd.plist &>/dev/null
+#
+pkill Citrix &>/dev/null
+#
+exit 0
