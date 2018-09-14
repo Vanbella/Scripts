@@ -28,7 +28,7 @@ rm -rf /usr/local/libexec/ReceiverHelper
 rm -rf /usr/local/libexec/ServiceRecords
 rm -rf /Users/Shared/Citrix\ Receiver
 rm -rf /Users/$user/Library/Application\ Support/Citrix\ Receiver
-rm -rf /Users/$user/Library/Application\ Support/Citrix/PlugIns
+rm -rf /Users/$user/Library/Application\ Support/Citrix
 #
 echo "Citrix Receiver uninstalled" >> /var/log/GSAlog
 exit 0
