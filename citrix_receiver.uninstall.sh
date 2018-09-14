@@ -29,6 +29,11 @@ rm -rf /usr/local/libexec/ServiceRecords
 rm -rf /Users/Shared/Citrix\ Receiver
 rm -rf /Users/$user/Library/Application\ Support/Citrix\ Receiver
 rm -rf /Users/$user/Library/Application\ Support/Citrix
+rm -rf /Users/$user/Library/Preferences/com.citrix.AuthManager.plist
+rm -rf /Users/$user/Library/Preferences/com.citrix.AuthManagerMac.plist
+rm -rf /Users/$user/Library/Preferences/com.citrix.receiver.nomas.plist
+rm -rf /Users/$user/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist
+rm -rf /Users/$user/Library/Preferences/com.citrix.ReceiverHelper.plist
 #
 echo "Citrix Receiver uninstalled" >> /var/log/GSAlog
 exit 0
