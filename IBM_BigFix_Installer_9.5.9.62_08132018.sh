@@ -4,7 +4,7 @@
 
 # Run the IBM BigFix installer
 
-installer -allowUntrusted -pkg /usr/local/GSAfiles/BESAgent-9.5.9.62-BigFix_MacOSX10.7.pkg -target /
+installer -pkg /usr/local/GSAfiles/BESAgent-9.5.9.62-BigFix_MacOSX10.7.pkg -target /
 
 sleep 30
 
