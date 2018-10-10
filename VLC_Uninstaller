@@ -7,7 +7,7 @@
 #  
 #get current user
 user=`who|grep console|sed -n 1p|awk '{print $1}'`
-
+#removing GSA VLC files
 rm -rf /Applications/VLC.app &>/dev/null
 rm -rf /Applications/GSA\ Elemental\ Files &>/dev/null
 rm -rf /Users/$user/Library/Application\ Support/org.videolan.vlc &>/dev/null
@@ -15,8 +15,17 @@ rm -rf /Users/$user/Library/Saved\ Application\ State/org.videolan.vlc.savedStat
 rm -rf /Users/$user/Library/Preferences/org.videolan.vlc.plist &>/dev/null
 rm -rf /Users/$user/Library/Preferences/org.videolan.vlc &>/dev/null
 #
+#Seek and Destroy VLC
+#!/bin/bash
+IFS=$'\n'
+for i in $(mdfind -onlyin /Applications VLC|sed 's/ /\\ /');
+do 
+rm -rfd $i* &>/dev/null
+done
 pkgutil --forget gov.gsa.gsaelementalfiles3.0.308022018 &>/dev/null
 pkgutil --forget gov.gsa.gsaelementalfiles3.0.4 &>/dev/null
+pkgutil --forget gov.gsa.vlcelemental3.0.1installer &>/dev/null
+pkgutil --forget gov.gsa.vlcelemental3.0installer &>/dev/null
 echo $(date) "VLC Uninstalled" >> /var/log/GSAlog
 #
 exit 0
