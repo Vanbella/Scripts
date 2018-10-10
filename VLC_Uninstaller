@@ -13,10 +13,10 @@ rm -rf /Applications/GSA\ Elemental\ Files &>/dev/null
 rm -rf /Users/$user/Library/Application\ Support/org.videolan.vlc &>/dev/null
 rm -rf /Users/$user/Library/Saved\ Application\ State/org.videolan.vlc.savedState &>/dev/null
 rm -rf /Users/$user/Library/Preferences/org.videolan.vlc.plist &>/dev/null
-rm -rf /Users/$user/Library/Preferences/org.videolan.vlc
+rm -rf /Users/$user/Library/Preferences/org.videolan.vlc &>/dev/null
 #
 pkgutil --forget gov.gsa.gsaelementalfiles3.0.308022018 &>/dev/null
-pkgutil --forget gov.gsa.gsaelementalfiles3.0.4 &>/dev/null
+pkgutil --forget gov.gsa.gsaelementalfiles3.0.4 &>/dev/null &>/dev/null
 echo $(date) "VLC Uninstalled" >> /var/log/GSAlog
 #
 exit 0
