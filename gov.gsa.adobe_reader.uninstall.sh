@@ -9,6 +9,7 @@ if [ -d /Applications/Adobe\ Reader.app ]; then
 #
 killall adobereader &> /dev/null
 rm -rf /Applications/Adobe\ Reader.app &> /dev/null
+rm -rf /Library/Application\ Support/Adobe/Reader/11.0 &> /dev/null
 #
 else
 echo "Adobe Reader not installed" >> /var/log/GSAlog
