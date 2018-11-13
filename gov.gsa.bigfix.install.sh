@@ -26,7 +26,7 @@ else
 echo $(date) "DNS not found, off GSA lan" >> /var/log/GSAlog
 #
 # Run the IBM BigFix installer
-installer -pkg /usr/local/GSAfiles/BESAgent-9.5.9.62-BigFix_MacOSX10.7.pkg -target /
+installer -pkg /usr/local/GSAfiles/BESAgent-9.5.10.79-BigFix_MacOSX10.7.pkg -target /
 sleep 1
 # Clean up after yourself
 rm -rf /usr/local/GSAfiles/BESAgent-9.5.10.79-BigFix_MacOSX10.7.pkg
